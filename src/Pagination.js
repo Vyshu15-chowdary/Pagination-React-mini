@@ -1,11 +1,16 @@
 import React from 'react'
 
-const Pagination = () => {
-    let pageNumbers = [1,2,3,4,5,6,7,8,9,10]
+const Pagination = ({data}) => {
+    let pageNumbers = []
+
+    for(let i=1; i< Math.ceil(data.length/10);i++){
+
+      pageNumbers.push(i);
+    }
   return (
     <div>
         <center>
-            {pageNumbers.map(page => <div className='pagebutton'>{page}</div>)}
+            {pageNumbers.map(page => <div className="pagebutton">{page}</div>)}
         </center>
     </div>
   )
