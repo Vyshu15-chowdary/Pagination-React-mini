@@ -2,6 +2,7 @@ import react ,{useState,useEffect}from 'react';
 import viteLogo from '/vite.svg'
 import './App.css'
 import axios from 'axios'
+import Pagination from './Pagination';
 
 function App() {
   const[data,setData] =useState([]);
@@ -24,6 +25,8 @@ function App() {
     <div>
 
       {perpage.map(post => <div className="post">{post.title}</div>)}
+      <Pagination/>
+
       </div>
       :
       <p>Data Not Loaded</p>
