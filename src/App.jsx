@@ -14,9 +14,10 @@ function App() {
 
     axios.get('https://jsonplaceholder.typicode.com/posts').then(
 
-      resizeBy => {setData(resizeBy.data)}
+      res => {setData(res.data);setPerpage(res.data.slice(0,10));
+      }
     )
-  })
+  },[])
  return(
   <div className='App'>
     Helloworld
