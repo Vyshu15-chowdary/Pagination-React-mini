@@ -20,14 +20,14 @@ const App =() => {
     )
   },[])
   const pageHandler = (pageNumber) =>{
-    setPerpage(data.slice(0,pageNumber*10))
+    setPerpage(data.slice((pageNumber*10)-10,pageNumber*10));
   }
  return(
   <div className='App'>
     {data.length>=1 ?
     <div>
 
-      {perpage.map(post => <div className="post">{post.title}</div>)}
+      {perpage.map(post => <div className="post">{post.title}</div>)} <br/>
       <Pagination data={data} pageHandler={pageHandler}/>
 
       </div>
