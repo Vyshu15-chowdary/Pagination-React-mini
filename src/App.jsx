@@ -23,7 +23,7 @@ function App() {
     {data.length>=1 ?
     <div>
 
-      {data.map(post => <div>{post.title}</div>)}
+      {perpage.map(post => <div className="post">{post.title}</div>)}
       </div>
       :
       <p>Data Not Loaded</p>
