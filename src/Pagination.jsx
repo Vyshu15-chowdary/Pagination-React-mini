@@ -12,7 +12,7 @@ const Pagination = ({data,pageHandler}) => {
     <div>
         <center>
             {pageNumbers.map(page => <div className="pagebutton"
-            onClick={()=> pageHandler(page)}>{page}</div>)}
+            onClick ={()=> pageHandler(page)}>{page}</div>)}
         </center>
     </div>
   )
