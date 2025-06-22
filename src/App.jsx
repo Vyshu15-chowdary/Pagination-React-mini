@@ -4,7 +4,7 @@ import './App.css'
 import axios from 'axios'
 import Pagination from './Pagination';
 
-function App() {
+const App =() => {
   const[data,setData] =useState([]);
   const [perpage,setPerpage] = useState([]);
 
@@ -19,13 +19,16 @@ function App() {
       }
     )
   },[])
+  const pageHandler = (pageNumber) =>{
+    setPerpage(data.slice(0,pageNumber*10))
+  }
  return(
   <div className='App'>
     {data.length>=1 ?
     <div>
 
       {perpage.map(post => <div className="post">{post.title}</div>)}
-      <Pagination/>
+      <Pagination data={data} pageHandler={pageHandler}/>
 
       </div>
       :
