@@ -20,8 +20,18 @@ function App() {
   },[])
  return(
   <div className='App'>
-    Helloworld
-  </div>
+    {data.length>=1 ?
+    <div>
+
+      {data.map(post => <div>{post.title}</div>)}
+      </div>
+      :
+      <p>Data Not Loaded</p>
+    }
+
+    </div>
+      
+  
  )
   
 }
