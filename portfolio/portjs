@@ -1,0 +1,122 @@
+const navLinks = document.querySelectorAll('header nav a');
+const logoLink = document.querySelector('.logo');
+const sections = document.querySelectorAll('section');
+const menuIcon = document.querySelector('#menu-icon');
+const navBar   = document.querySelector('header nav');
+
+menuIcon.addEventListener('click',() =>{
+    menuIcon.classList.toggle('bx-x');
+    navBar.classList.togglr('active');
+})
+
+const activePage =() => {
+    const header = document.querySelector('header');
+    const barsbox =document.querySelector('.bars-box');
+
+    header.classList.remove('active');
+    setTimeout(()=>{
+        header.classList.add('active');
+    },500);
+
+    navLinks.forEach(Link =>{
+        Link.classList.remove('active');
+    });
+
+    barsbox.classList.remove('active');
+    setTimeout(() =>{
+        barsbox.classList.add('active');
+    },500);
+
+    sections.forEach(section =>{
+        section.classList.remove('active');
+
+    });
+     menuIcon.classList.remove('bx-x');
+     navBar.classList.remove('active');
+
+}
+ navLinks.forEach((Link,idx)=>{
+    Link.addEventListener('click',() =>{
+        if (!Link.classList.contains('active')){
+            activePage();
+            Link.classList.add('active');
+            setTimeout(()=>{
+                sections[idx].classList.add('active');
+            },500);
+        }
+    });
+ });
+ 
+
+ logoLink.addEventListener('click',()=>{
+    if (!navLinks[0].classList.contains('active')) {
+        activePage();
+
+        navLinks[0].classList.add('active');
+    }
+ });
+
+const resumeBtns= document.querySelectorAll('.resume-btn');
+resumeBtns.forEach((btn,idx)=>{
+    btn.addEventListener('click',()=>{
+        const resumeDetail = document.querySelectorAll('.resume-detail');
+
+        resumeBtns.forEach(btn => {
+            btn.classList.remove('active');
+
+        });
+        btn.classList.add('active');
+
+        resumeDetail.forEach(details => {
+            details.classList.remove('active');
+        });
+        resumeDetail[idx].classList.add('active');
+    });
+
+});
+const arrowRight= document.querySelector('.portfolio-box.navigation.arrow-right');
+const arrowLeft= document.querySelector('.portfolio-box.navigation.arrow-left');
+
+
+let index = 0;
+
+ const activeportfolio = () => {
+ const imgslide = document.querySelector('.portfolio-carousel .img-slide');
+ const portfolioDetails =document.querySelectorAll('.portfolio-detail');
+
+
+ imgslide.style.transform ='translatex(calc{$(index * -100}% -${index * 2}rem))';
+ 
+ pportfolioDetails.forEach(detail =>{
+    detail.classList.remove('active');
+ });
+ portfolioDetails[index].classList.add('active');
+
+}
+arrowRight.addEventListener('click',() =>{
+    if (index < 4){
+        index++;
+        arrowLeft.classList.remove('disabled');
+
+    }
+    else {
+           index = 5;
+           arrowRight.classList.add('diabled');
+    }
+     activeportfolio();
+});
+arrowLeft.addEventListener('click',() =>{
+    if (index > 1){
+        index--;
+        arrowLeft.classList.remove('disabled');
+
+    }
+    else {
+           index = 0;
+    }
+     activeportfolio();
+});
+
+
+
+

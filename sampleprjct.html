@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>just practice</title>
+  <link ref="stylesheet" href="sampleprjct.css"/>
+</head>
+<body>
+  
+   <!--container-->
+   <div class="container">
+    <button onclick="changecolor()">Click Me!</button>
+   </div>
+
+   <script type="text/javascript">
+    let body = document.body;
+    
+
+    function changecolor(){
+      var colors =["red","pink","orange","blue"]
+      body.style.background = colors[i];
+
+      if(i== colors.length){
+        i=0;
+
+      }else{
+        i++;
+      }
+    }
+   </script>
+  
+</body>
+</html>

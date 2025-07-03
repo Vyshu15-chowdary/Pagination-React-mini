@@ -1,0 +1,56 @@
+*{
+    background-color: black;
+}
+
+
+.nav-menu{
+    background-color: black;
+    height:40px;
+    font-size: 25px;
+    font-weight:45px;
+    justify-content: space-between;
+    position:fixed;
+    overflow: hidden;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.nav-menu ul{
+    padding:0;
+    margin:0;
+    list-style-type: none;
+    text-align: center;
+
+}
+.nav-menu li{
+    display:inline;
+    padding:45px;
+    margin:10px;
+    vertical-align: middle;
+}
+.nav-menu a{
+    text-decoration: none;
+    padding:25px 25px 25px 25px 60px;
+    color:white;
+    vertical-align: middle;
+}
+.nav-menu a:hover{
+    background:rgb(54, 54, 238);
+    color:white;
+    border-radius: 7px;
+}
+ .vehicles{
+    color:white;
+    text-align: center;
+    font-weight: bold;
+    font-family: verdana;
+}
+.box1 img{   
+    border-radius: 5px;
+    align-items: center;
+    margin-left:40%;
+    
+}
+.box1 h2,h3,h4{
+    color:white;
+    align-items: center;
+    margin-left:45%;
+}

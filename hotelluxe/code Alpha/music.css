@@ -1,0 +1,68 @@
+
+
+*{
+    margin:0;
+    padding:0;
+    font-family: Arial, Helvetica, sans-serif;
+    background:orangered;
+    font-size: 20px;
+
+}
+body{
+    height:50%;
+    width:50%;
+    display:flex;
+    align-items: center;
+    font-size:var(--font-size);
+}
+#logo  p i{
+    position:relative;
+    font-size:35px;
+    color:orange;
+    margin-top:20%;
+    padding:10%;
+
+}
+.show_song_no{
+    display:flex;
+    text-align:right;
+    justify-content: right;
+    color:var(--color);
+    font-size:25px;
+    margin-left:80%;
+    padding-left:10%;
+    position:absolute;
+}
+ 
+ img{
+    position:center;
+    margin-top:10%;
+    margin-left:100%;
+    padding-left:60%;
+    margin-bottom: 40%;
+    transform:scale(2.5);
+    
+
+ }
+.volume ,.right{
+    padding-left:240%;
+}
+.middle,.duration{
+   text-align: right;
+   justify-content: right;
+   font-size: 30%;
+    
+}
+.middle{
+    align-items: right;
+    justify-content: right;
+    margin-top:-40%;
+    padding-left:350%;    
+}
+#duration_slider{
+    align-items: right;
+    justify-content:right;
+    margin-top:-50%;
+
+}
+

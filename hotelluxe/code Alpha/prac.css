@@ -1,0 +1,26 @@
+
+.nav-bar{
+    background-color: antiquewhite;
+    height:40px;
+    font-size: 20px;
+    font-weight: bold;
+    font:tohoma;
+
+}
+.nav-bar ul{
+    padding:0;
+    list-style: none;
+    text-align: right;
+}
+.nav-bar li{
+    display:inline;
+    padding:15px;
+    vertical-align:middle;
+}
+.nav-bar a{
+    text-decoration: none;
+    padding:8px 8px 8px 8px;
+    color:black;
+    vertical-align: middle;
+}
+
