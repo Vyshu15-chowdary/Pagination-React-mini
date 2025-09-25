@@ -1,13 +1,15 @@
 import React from "react";
 import {BrowserRouter as Router,Routes,Route} from "react-router-dom";
 
-import Home from ".Pages/Home";
-import Interview from ".Pages/Interview";
+import Home from "./Pages/Home.jsx";
+import Interview from "./Pages/Interview.jsx";
 
 function App(){
   return(
      <Router>
       <Routes>
+        
+         <Route element={<Layout />}></Route>
         <Route path="/" element={<Home />} />
         <Route path="/interview" element={<Interview />} />
       </Routes>
